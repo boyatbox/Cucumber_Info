@@ -34,7 +34,6 @@ Feature Tag in AND: partial match
 tags = {"@SmokeTest","@F1"}
 Runs= ONE,THREE
 -------------------------------------------------------------------------------------------------------------
-
 1. Selecting scenario with single tag: use single tag or multiple in or condition
-1. Selecting scenario with multiple tag: use condition
+2. Selecting scenario with multiple tag: use condition
 -------------------------------------------------------------------------------------------------------------
