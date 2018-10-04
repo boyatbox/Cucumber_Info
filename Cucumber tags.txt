@@ -1,0 +1,36 @@
+﻿CUCUMBER TAGS BEHAVIOR
+-------------------------------------------------------------------------------------------------------------
+1. tags = {“@tag”, “@tag1”} : means AND condition. –It says that scenarios matching both these tag needs to be executed.
+2. tags = {“@tag1, @tag2”} : means OR condition. — It says that scenarios matching any of this tag needs to be executed.
+-------------------------------------------------------------------------------------------------------------
+@F1
+Feature: Testing tags behavior
+
+@SmokeTest @RegressionTest @STest
+Scenario: Successful Login
+Given ONE
+
+@RegressionTest
+Scenario: UnSuccessful Login
+Given TWO
+
+@SmokeTest
+Scenario: Add a product to bag
+Given THREE
+-------------------------------------------------------------------------------------------------------------
+SINGLE: ignores scenario containing multiple tags/exact match
+tags = {"@SmokeTest"}
+Runs=ONE,THREE
+
+OR: also ignores scenario containing multiple tags/exact match
+tags = {"@SmokeTest,@RegressionTest"}
+Runs= TWO,THREE
+
+AND: partial match
+tags = {"@SmokeTest","@RegressionTest"}
+Runs= ONE
+
+Feature Tag in AND: partial match
+tags = {"@SmokeTest","@F1"}
+Runs= ONE,THREE
+-------------------------------------------------------------------------------------------------------------
