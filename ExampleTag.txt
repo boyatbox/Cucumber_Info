@@ -15,7 +15,7 @@ Examples:
   |week 2    |week 3 o  |
   
 
-  #if we ran providing the tag @Smoke we would only run the Successful login test for the Firefox browser. If instead we ran providing the tag @Regression we would instead run all of the Bad login tests, and the Successful login test over all three browsers. Providing no tag would run all tests, both Smoke and Regression. 
+#if we ran providing the tag @Smoke we would only run the Successful login test for the Firefox browser. If instead we ran providing the tag @Regression we would instead run all of the Bad login tests, and the Successful login test over all three browsers. Providing no tag would run all tests, both Smoke and Regression. 
 Scenario Outline: Successful login
 
 	Given I want to use the browser [browser]
