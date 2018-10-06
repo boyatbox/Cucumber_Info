@@ -7,10 +7,13 @@ Scenario Outline: Test state
 	Given <other_state> without a table
 
 Examples: Rainbow colours
+	Example 1
 	| state    | other_state |
 	| missing  | passing     |
 	| passing  | passing     |
 	| failing  | passing     |
+	
 Examples:Only passing
+	Example 2
 	| state    | other_state |
 	| passing  | passing     |
