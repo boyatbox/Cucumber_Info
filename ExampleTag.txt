@@ -1,0 +1,15 @@
+Scenario Outline: Doing some tests
+  Given a step
+  When I do some <input>
+  Then I should get some <output>
+
+@daily
+Examples:
+  |input     |output    |
+  |daily 1   |daily 2 o |
+
+@weekly
+Examples:
+  |input     |output    |
+  |week 1    |week 1 o  |
+  |week 2    |week 3 o  |
