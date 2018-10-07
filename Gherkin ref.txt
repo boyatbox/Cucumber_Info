@@ -1,0 +1,8 @@
+Scenarios are like test cases and start with the Scenario keyword in a new line (different from the Feature intent). The text that immediately follows the Scenario keyword, and is on the same line, is the Scenario Title.
+
+
+There can be only one Background in one Feature file and it allows us to set a precondition for all Scenarios in a Feature file.
+A Background is like a Scenario, containing a number of Steps.
+Background is run before each Scenario, but after the BeforeScenario Hooks.
+
+A Feature/Scenario can have multiple Tags; just separate them with spaces or put them on a different line.Inheritance is when Tags are inherited. If a Feature file has a Tag, then Cucumber will assign that Tag to all Scenarios and all Scenario Outlines in that Feature file.
