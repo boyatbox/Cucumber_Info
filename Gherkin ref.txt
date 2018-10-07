@@ -6,3 +6,13 @@ A Background is like a Scenario, containing a number of Steps.
 Background is run before each Scenario, but after the BeforeScenario Hooks.
 
 A Feature/Scenario can have multiple Tags; just separate them with spaces or put them on a different line.Inheritance is when Tags are inherited. If a Feature file has a Tag, then Cucumber will assign that Tag to all Scenarios and all Scenario Outlines in that Feature file.
+
+Pending Steps
+When we use the code suggested by Cucumber in our Step Definition file, and we run the Feature file then we get Pending Steps Exception.
+Pending Steps Exception is because of following Code:throw new PendingException();
+When Cucumber encounters this statement, it understands that these Steps are still a work in progress Step.
+Status of the Scenario is pending, First Step having PendingException() will be marked as pending and all other Steps in that Scenario are skipped.
+
+Undefined Steps
+When we first executed the Feature file, Cucumber did not find any matching Step Definitions, that's why Cucumber gave us Undefined Steps Error.
+Cucumber will also give its own Suggestion for getting rid of Undefined Steps. All subsequent Steps after Undefined Step in the Scenario are skipped and Scenario is marked as Fail.
